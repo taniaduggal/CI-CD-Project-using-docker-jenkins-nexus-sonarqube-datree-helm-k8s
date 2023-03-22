@@ -7,6 +7,13 @@ pipeline {
                     image 'maven'
                 }
             }
+            stage('Maven build') {
+                steps {
+                    script {
+                        sh 'mvn clean install'
+                    }
+                }
+            }
             steps {
                 script {
                     withSonarQubeEnv(credentialsId: 'sonar-token') {
