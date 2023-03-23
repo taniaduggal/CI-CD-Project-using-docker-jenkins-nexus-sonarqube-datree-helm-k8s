@@ -18,7 +18,7 @@ pipeline {
         stage('quality gate checks') {
             steps {
                 script {
-                   waitForQualityGate abortPipeline: false, credentialsId: 'sonar-token1'
+                   waitForQualityGate abortPipeline: true, credentialsId: 'sonar-token1'
                     }
                 }
             }
