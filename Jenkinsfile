@@ -7,7 +7,6 @@ pipeline {
                     image 'maven'
                 }
             }
-        }
             steps {
                 script {
                     withSonarQubeEnv(credentialsId: 'sonar-token1') {
@@ -15,6 +14,7 @@ pipeline {
                     }
                 }
             }
+        }
         stage('quality gate checks') {
             steps {
                 script {
