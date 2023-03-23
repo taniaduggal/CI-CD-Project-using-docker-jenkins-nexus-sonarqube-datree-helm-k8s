@@ -14,10 +14,10 @@ pipeline {
                     }
                 }
             }
-            stage('quality gate checks') {
-                steps {
-                    script {
-                        withSonarQubeEnv(credentialsId: 'sonar-token1')
+        stage('quality gate checks') {
+            steps {
+                script {
+                    withSonarQubeEnv(credentialsId: 'sonar-token1')
                     }
                 }
             }
