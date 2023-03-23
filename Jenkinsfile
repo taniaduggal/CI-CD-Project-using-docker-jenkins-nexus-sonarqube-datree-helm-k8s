@@ -7,6 +7,7 @@ pipeline {
                     image 'maven'
                 }
             }
+        }
             steps {
                 script {
                     withSonarQubeEnv(credentialsId: 'sonar-token1') {
@@ -21,6 +22,5 @@ pipeline {
                     }
                 }
             }
-        }
     }
 }
